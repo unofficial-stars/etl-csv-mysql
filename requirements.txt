@@ -1,0 +1,5 @@
+pymysql
+petl
+pandas
+psycopg2-binary
+sqlalchemy
