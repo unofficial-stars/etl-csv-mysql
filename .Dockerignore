@@ -1,4 +1,6 @@
 .venv
 
+.git
+
 *.csv
 *.sql
