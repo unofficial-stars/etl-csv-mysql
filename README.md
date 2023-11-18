@@ -1,6 +1,8 @@
 # ETL CSV to MySQL
 This repository provides a simple ETL (Extract, Transform, Load) script that reads a CSV file, transforms the data, and loads it into a MySQL database. Follow the steps below to set up and run the ETL process.
 
+![ETL Process](images/etl-to-csv-mysql.gif)
+
 ## Setup
 
 1. Clone this repository:
@@ -40,6 +42,15 @@ docker run -it --rm --name etl-csv-mysql \
     -p 1270:1270 \
     etl-csv-mysql:latest \
     python etl_csv_msql.py input.csv mysql testing_traffic
+```
+for windows cmd
+```bash
+docker run -it --rm --name etl-csv-mysql --link mysql --network="myhost" -v "%cd%:/application" -p 1270:1270 etl-csv-mysql:latest python etl_csv_msql.py Traffic.csv mysql testing traffic
+```
+without build images pull n run
+```bash
+# docker pull yuriowindi/etl-csv-mysql:latest
+docker run -it --rm --name etl-csv-mysql --link mysql --network="myhost" -v "%cd%:/application" -p 1270:1270 yuriowindi/etl-csv-mysql:latest python etl_csv_msql.py Traffic.csv mysql testing traffic
 ```
 Replace `input.csv`, `mysql`, and `testing_traffic` with your actual `input file`, `database host`, `database name`, and `table name`.
 
