@@ -76,3 +76,5 @@ Now, you can use Metabase to explore and visualize the data in your MySQL databa
 Note: The default Metabase username is `admin` and the password is `secret12345`. Make sure to change the password for security reasons.
 
 Feel free to customize the configuration according to your needs. Happy data processing!
+
+GIT GUD !!
